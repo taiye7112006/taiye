@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html style="padding:30px;">
+  <head>
+    <style>
+      /*  .instagram{
+        height:30px;
+        display: block;
+        z-index:100;
+        margin-bottom: 30px;
+      }*/
+   .button{
+        position: fixed;
+        top:60px;
+        bottom:0;
+        left: 0;
+        display: inline-block;
+        vertical-align: top;
+        border:none;
+      }
+ .sidebar{
+  position: relative;
+  height:50px;
+  width: 35px;
+}
+p:hover{
+  background-color: rgb(240, 240, 240);
+  width: 50px;
+}
+
+p{
+  font-size:12px;
+  align-items:end;
+}
+
+.count{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  height: 5px;
+  border-radius:10;
+}
+      .stories-1{
+        display: inline-block;
+      }
+      .channel-1, .channel-2{
+        width: 50px;
+        border-bottom-left-radius: 12.5px;
+        border-bottom-right-radius: 12.5px;
+        border-top-left-radius:  12.5px;
+        border-top-right-radius: 12.5px;
+        border-width: 5px;
+        padding: 2px;
+        background-color: rgba(128, 0, 70, 0.842);
+      }
+     
+      .stories-2{
+        display: inline;
+      }
+      .images{
+        display: inline;
+        vertical-align: top;
+        justify-content:space-between;
+        margin-left: 10px;
+        margin-bottom: 30px;
+        border-bottom: 3px;
+        border-bottom-color:black ;
+      }
+      .user{
+        display:flex;
+      flex-direction: row
+      }
+      .picture{
+      border-radius: 30px;
+      }
+      .text{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        vertical-align: top;
+       margin-bottom:3px;
+       font-weight: 700;
+       font-family: 'Times New Roman', Times, serif;
+       vertical-align: top;
+       margin-left: 30px;
+       font-size: 15px;
+       line-height: 20px;
+      }
+      .text-2{
+     font-family: Arial;
+     font-style: oblique;
+      }
+      .span{
+        margin-left: 50px;
+        vertical-align: top;
+        color:rgb(158, 158, 158);
+      }
+      .thumbnail{
+        display:flex;
+        flex-direction:row;
+      }
+      .thumbnail-1{
+        width: 400px;
+        margin-bottom: 10px;
+      }
+      .right-bar{
+        position: relative;
+        display: flex;
+        flex-direction:row;
+        width:100px;
+       }
+      .my-channel{
+        width: 40px;
+        border-radius:20px;
+      }
+      .user-name{
+        margin-left: 5px;
+        font-family: Roboto;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body style="display: grid;
+  grid-template-columns: 1fr 1fr;">
+<div class="button">
+  <div class="sidebar">
+    <img class="icons" src="icons/home.svg">
+  </div>
+<p>Home</p>
+<div class="sidebar">
+  <img class="icons" src="icons/search.svg">
+</div>
+<p>Search</p>
+<div class="sidebar">
+  <img class="icons" src="icons/explore.svg">
+</div>
+<p>Explore more</p>
+  <div class="sidebar">
+    <img class="icons" src="icons/circle-play-regular.svg">
+  </div>
+<p>Reels</p>
+<div class="sidebar">
+  <img class="icons" src="icons/paper-plane-regular.svg">
+  <div class="count">.
+  </div>
+</div>
+<p>messages</p>
+<div class="sidebar">
+  <img class="icons" src="icons/heart-regular.svg"> 
+</div>
+<p>LIkes</p>
+<div class="sidebar">
+  <img class="icons2" src="icons/square-plus-regular.svg">
+</div>
+<p>Home</p> 
+</div>
+<div style="display: flex;
+flex-direction:column;
+width:500px;">
+<div class="images">
+<div class="stories-1">
+    <img class="channel-1" src="channel-pictures/channel-1.jpeg">
+</div>
+<div class="stories-2">
+    <img class="channel-2" src="channel-pictures/channel-10.jpeg">
+</div>
+<div class="stories-2">
+    <img class="channel-2" src="channel-pictures/channel-10.jpeg">
+</div>
+<div class="stories-2">
+    <img class="channel-2" src="channel-pictures/channel-10.jpeg">
+</div>
+</div>
+<div style="
+flex-direction:column;
+      padding-left:30px;
+">
+<div class="user">
+<div class="picture">
+    <img src="channel-pictures/channel-11.jpeg">
+</div>
+<div class="text">
+    JAMES DANIEL<span class="span">2d</span>
+<div class="text-2">Los Angeles</div>
+</div>
+</div>
+<div class="thumbnail">
+    <img class="thumbnail-1" src="thumbnails/thumbnail-1.webp">
+</div>
+<div style="display: flex;
+  flex-direction:row;
+  width: 20px;
+  column-gap:10px;">
+    <img src="icons/heart-regular.svg">
+    <img src="icons/comments-regular.svg">
+    <img src="icons/paper-plane-regular.svg"> 
+</div>
+<div>
+    3 likes
+</div>
+<div>
+<span style="font-weight: bold;
+font-size: 20px;">JAMES</span> a great show with bes0s
+</div>
+<div style="font-size: 15px;
+    display: block;
+    color: rgb(83, 82, 82);">
+view all 3000 comments
+</div>
+    </div>
+</div>
+    <div class="right-bar">
+      <div>
+        <img class="my-channel" src="channel-pictures/my-channel.jpeg"></div>
+      <div class="user-name">browns_12
+        <span style="color:rgb(163, 162, 162);
+        display: block;
+        font-weight: 500;
+        font-size: 15px;"> brown 911</span>
+        <p style="position: absolute;
+        top:20px;
+        right:50px;">Switch</p>
+      </div>
+    </div>
+  </body>
+</html>

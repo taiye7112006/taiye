@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Calculator
+    </title>
+    <style>
+      /* When free, set it that when you hover over the button it changes color*/
+      body{
+        background-color: black;
+      }
+
+      .black{
+        background-color: rgb(52, 52, 52);
+        color: white;
+        border: none;
+        font-size: 30px;
+        border-radius: 60px;
+        padding: 20px 40px;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+
+      .black-reset{
+        background-color: rgb(52, 52, 52);
+        color: white;
+        border: none;
+        font-size: 15px;
+        border-radius: 60px;
+        padding: 20px 40px;
+        cursor: pointer;
+      }
+
+      .yellow{
+        background-color: yellow;
+        color: red;
+        font-size: 30px;
+        padding: 20px 40px;
+        border-radius: 60px;
+        cursor: pointer;
+        border: none;
+      }
+
+      .display{
+        color: white;
+        font-size: 45px;
+      }
+      .calcs{
+        display: inline-block;
+      }
+      .buttons{
+     display: inline-flex;
+     flex-direction: column;
+     vertical-align: top;
+        
+      }
+
+    </style>
+  </head>
+  <body>
+    <p class="paragraph display"></p> 
+    <div>
+      <div class="calcs">
+        <p>
+          <button class="black" onclick="inputValue('1');">
+            1
+          </button>
+          <button class="black" onclick="inputValue('2');">
+            2
+          </button>
+          <button class="black" onclick="inputValue('3');">
+            3
+          </button>
+          
+          </p>
+          <p>
+          <button class="black" onclick="inputValue('4');">
+            4
+          </button>
+          <button  class="black" onclick="inputValue('5');">
+            5
+          </button>
+          <button class="black" onclick="inputValue('6');">
+            6
+          </button>
+          
+          </p>
+          <p>
+          <button class="black" onclick="inputValue('7');">
+            7
+          </button>
+          <button class="black" onclick="inputValue('8');">
+            8
+          </button>
+          <button class="black" onclick="inputValue('9');">
+            9
+          </button>
+          <p>
+            <button class="black" onclick="inputValue('0');">
+              0
+            </button>
+           
+            <button class="black" onclick="
+            eval(calculation)
+            calculation = eval(calculation)
+            inputValue('');
+            ">
+              =
+            </button>
+          
+          </p>
+          <div class="reset">
+            <button title="Resets the calculator" class="black-reset" onclick="
+            calculation = ''
+            alert('Cleared');
+            localStorage.removeItem('calculation');
+            document.querySelector('.paragraph')
+                  .innerHTML = (calculation)
+                 " title="Resets the calculator">
+            Reset
+            </button>
+          </div>
+          </p>
+          
+      </div>
+      <div class="buttons">
+        <button onclick="inputValue(' + ')">
+          +
+        </button>
+        <button onclick="inputValue(' - ')">
+          -
+        </button>
+        <button onclick="inputValue(' * ')">
+          *
+        </button>
+        <button onclick="inputValue(' / ')">
+        /
+        </button>
+      </div>
+    
+    
+  </div>
+
+    <script>
+      let calculation = JSON.parse(localStorage.getItem('calculation'));
+      if (!calculation){
+        calculation = ''
+      };
+      //value should be input as a string.
+      
+      function inputValue(value){
+        calculation += value
+        document.querySelector('.paragraph')
+          .innerHTML = (calculation)
+       localStorage.setItem('calculation', JSON.stringify(calculation));
+      }
+    </script>
+  </body>
+</html>
