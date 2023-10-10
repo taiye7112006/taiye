@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking.com</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="60">
+  <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+<style>
+  .body{
+    background-image: url(thumbnails/thumbnail-8.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .head{
+    position: relative;
+    background-color: rgb(34, 33, 33);
+    height: 50px;
+  }
+  .user{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    background-color: white;
+  }
+  .div{
+    display: grid;
+    grid-template-columns:80px 1fr;
+  }
+  .booking{
+    position: absolute;
+    top: -5px;
+    left: 500px;
+    color: white;
+   
+  }
+  .sidebar{
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 700px;
+  }
+  .icon{
+    vertical-align: top;
+    width: 30px;
+    margin-top: 8px;
+    margin-bottom:9px;
+  }
+  .main{
+    display: grid;
+    grid-template-columns:2fr 100px;
+    background-color: transparent;
+    height: 700px;
+  }
+  .div-inputs{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top:50px ;
+    padding-left: 200px;
+  }
+  .inputs{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+  }
+  .inputs:active{
+    border: none;
+  }
+  /*
+  .Home-button{
+    width: 100px;
+    height: 30px;
+    background-color:brown;
+  }*/
+  .signup-button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(28, 28, 141);
+  }
+  .signin-button{
+    background-color: blueviolet;
+    margin-top: 20px;
+  }
+  .Home-button, .signup-button{
+    border: none;
+  }
+  .insta-textinstagram{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  .instagram{
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-top: 10px;
+  }
+  .insta-text{
+    vertical-align: top;
+  }
+
+</style>
+</head>
+<body  class="body">
+<div class="head">
+  <p class="booking">Booking.com</p>
+  <img class="user" src="icons/user-regular.svg">
+</div> 
+<div class="div">
+  <div class="sidebar">
+    <div>
+      <img class="icon" src="icons/house-solid.svg">
+      <p>Home</p>
+    </div>
+    <div>
+      <img class="icon" src="icons/youtube-music.svg">
+      <p>Music</p>
+    </div>
+    <div>
+      <img class="icon" src="icons/circle-play-regular.svg">
+      <p>Music</p>
+    </div>
+    <div>
+      <img class="icon" src="icons/compass-regular.svg">
+      <p>Music</p>
+    </div>
+    <div>
+      <img class="icon" src="icons/download.png">
+      <p>Music</p>
+    </div>
+    <div>
+      <img class="icon" src="icons/library.svg">
+      <p>Music</p>
+    </div>
+    
+    
+  </div>
+    <div class="main">
+      <div class="div-inputs">
+        <label for="E-mail Address : ">E-mail Address : </label>
+        <input class="input" type="email" id="E-mail Address : " placeholder="name@gmail.com" required>
+        <label for="password">Password : </label>
+        <input class="input" type="password" maxlength="8" placeholder="Password" id="password" required>
+        <button class="signin-button" >Sign-In</button>
+        <input type="submit">
+
+      <div class="insta-textinstagram">
+        <img class="instagram" type="icon" src="icons/download.png">
+        <p class="insta-text">Sign-In with instagram</p>
+      </div>
+      <div class="insta-textinstagram">
+        <img class="instagram" type="icon" src="icons/download.png">
+        <p class="insta-text">Sign-In with Facebook</p>
+      </div>
+      <div class="insta-textinstagram">
+        <img class="instagram" type="icon" src="icons/download.png">
+        <p class="insta-text">Sign-In with twitter</p>
+      </div>
+      </div>
+    
+      <button class="signup-button" style="color: azure;"> Sign-up</button>
+      
+    </div>
+  </div>
+<body>
+</html>
